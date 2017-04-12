@@ -21,7 +21,8 @@ permalink_defaults:
 source_dir: source
 public_dir: public
 tag_dir: tags
-archive_dir: archives
+# public目录下存放archive和category的文件夹
+archive_dir: archives 
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
@@ -63,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: typing
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
