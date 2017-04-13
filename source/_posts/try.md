@@ -1,5 +1,7 @@
 ---
 title: 尝试一下Hexo的功能特性
+categories:
+	- Demo
 tags:
   - Hexo
   - demo
