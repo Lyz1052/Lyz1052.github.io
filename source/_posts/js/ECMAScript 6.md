@@ -1,13 +1,4 @@
----
-title: 《ES6入门》阅读笔记
-date: 2016-06-16 17:50:59
-categories:
- - JavaScript
-tags:
- - JavaScript
- - ECMAScript6
- - ES6
----
+2017年3月20日14:30:14
 
 > http://es6.ruanyifeng.com/
 - [ ] 前言

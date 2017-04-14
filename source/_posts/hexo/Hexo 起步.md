@@ -49,7 +49,7 @@ tags:
 
 
 - 发布到github
-	- 在github上创建项目：项目名为 用户名.github.io
+	- 在github上创建Page项目：项目名为 `用户名.github.io`
 
 	- hexo的发布模块
 	
@@ -72,7 +72,10 @@ tags:
 	```
 
 ## Tips
+- 当前hexo目录，可以放在Page项目里除gh-pages和master以外的分支中
 
-- 写完博客后，用简化的命令`hexo s` `hexo g` `hexo d`完成发布
+- 除了发布目录下的文章，模板配置的改动，本地服务器上都可以即时看到（但是更换模板需要重启服务）
+
+- 写完博客后，用简化的命令 `hexo generate --deploy`直接先生成再发布（`hexo deploy --generate`功能相同）
 
 - 不光是yml文件，包括markdown文档，字段名的冒号后一定要跟上一个半角空格，不然会报错
