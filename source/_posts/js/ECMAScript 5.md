@@ -1,6 +1,12 @@
-2017年1月14日14:30:50
-javascript 严格模式
-
+---
+title: ECMAScript 5
+date: 2017-01-04T14:30:50+08:00
+tags: 
+	- javascript
+	- 严格模式
+categories: 
+	- js
+---
 ### 严格模式 
 > http://es6.ruanyifeng.com/#docs/module
 - 变量必须声明后再使用 ，否则报错

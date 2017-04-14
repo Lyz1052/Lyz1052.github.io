@@ -1,5 +1,9 @@
-2017年3月20日14:30:14
-
+---
+title: ECMAScript 6
+date: 2017-03-04T14:30:14+08:00
+categories: 
+	- js
+---
 > http://es6.ruanyifeng.com/
 - [ ] 前言
 - [ ] ECMAScript 6简介
