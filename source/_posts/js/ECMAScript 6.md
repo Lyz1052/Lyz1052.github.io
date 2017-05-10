@@ -1,6 +1,6 @@
 ---
 title: ECMAScript 6
-date: 2017-03-04T14:30:14+08:00
+date: 2017-03-20
 categories: 
 	- js
 ---

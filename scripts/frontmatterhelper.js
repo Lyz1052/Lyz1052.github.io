@@ -56,7 +56,7 @@ hexo.source.addProcessor('posts/*path', function(file){
 					
 					try{
 						
-						date = date?moment(date.replace(/[年月]/g,'-').replace(/[日]/g,' ')).date(4).format():moment().format();
+						date = date?moment(date.replace(/[年月]/g,'-').replace(/[日]/g,' ')).format('YYYY-MM-DD'):moment().format('YYYY-MM-DD');
 						tags = tags?['',...tags.split(/[\s+,，.。;；]/g)].join('\n\t- '):'';
 						
 					}catch(e){
@@ -68,7 +68,7 @@ hexo.source.addProcessor('posts/*path', function(file){
 					}
 					
 					if(!stop)
-						insertFrontMatter(date,tags);
+						insertFrontMatter(date,tags.toLowerCase());
 				}
 				
 				function insertFrontMatter(date,tags){

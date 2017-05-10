@@ -1,6 +1,6 @@
 ---
 title: Bash Shell
-date: 2017-04-04T16:28:10+08:00
+date: 2017-04-14
 categories: 
 	- shell
 ---

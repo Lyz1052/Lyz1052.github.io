@@ -1,6 +1,6 @@
 ---
 title: ECMAScript 5
-date: 2017-01-04T14:30:50+08:00
+date: 2017-01-14
 tags: 
 	- javascript
 	- 严格模式
