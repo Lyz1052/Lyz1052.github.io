@@ -1,12 +1,14 @@
 ---
-title: Comparator
-date: 2017-05-19
+title: Java8 comparing 的两个重载
+date: 2017-05-23
 tags: 
-	- comparator<t>的comparing是提供comparator接口函数的预定义方法
-	- 有如下两个重载
+	- java8
+	- comparing
 categories: 
 	- java
 ---
+Comparator<T>的comparing是提供Comparator接口函数的预定义方法，有如下两个重载
+
 重载一
 
 ```

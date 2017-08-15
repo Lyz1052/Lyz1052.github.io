@@ -1,9 +1,10 @@
 ---
-title: 深入理解Java虚拟机阅读笔记
+title: 深入理解Java虚拟机阅读笔记 II
 date: 2017-04-17
 tags: 
-	- java虚拟机
+	- 虚拟机
 	- java
+	- 阅读笔记
 categories: 
 	- java
 ---
