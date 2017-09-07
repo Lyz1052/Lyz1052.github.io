@@ -7,7 +7,9 @@ tags:
 categories: 
 	- english
 ---
-bow, stern, oar, shack, skiff, sack
+stem bow skiff stern, oar shack
+
+sack jerk cramp
 
 ---
 
@@ -22,3 +24,6 @@ The tuna shone silver in the sun and after he had dropped back into the water an
 But four hours later the fish was still swimming steadily out to the sea, towing the skiff, and the old man was still braced solidly with the line across his back.
 
 The fish never changed his course nor his direction all that night as far as the man could tell from watching the stars.
+
+But what is his plan, he thought. And what is mine? Mine I must improvised with his because of his great size.
+

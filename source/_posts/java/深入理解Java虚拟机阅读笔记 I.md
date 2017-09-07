@@ -45,6 +45,40 @@ categories:
     - 使用句柄进行访问，移动对象时，句柄地址并不需要修改，只需要修改对象的实例数据指针，而使用直接访问时，如果需要移动对象在内存中的位置，需要修改对象引用。不过直接访问只需要通过一次寻址就可以找到对象的实例数据，在多数场景下可以节省开销
     - HotSpot虚拟机使用直接访问方式访问对象
 
+### Out Of Memory(OOM)异常
+
+- Java堆OOM：-Xms和-Xmx分别控制Java堆的最小和最大内存大小
+    ```
+    ...
+    while(true){
+        list.add(new Object())
+    }//...java.lang.OutOfMemoryError：Java heap space
+    ...
+    ```
+    内存泄露时，需要找出哪些是GC无法回收的对象，并确定这些对象无法回收的原因，如果不存在内存泄露，那么需要从代码层面找出对象生命周期过长的原因，或者检查虚拟机的上述参数，对比物理内存看看是否可以增加
+
+- 方法区和运行时常量池OOM
+    - 运行时常量池中，字符串的存储位置在JDK7之后有变动，所以下列代码在不同的JDK下有不同表现
+    ```
+    String str1 = new StringBuilder().append("计算机软件).toString();
+    System.out.println(str1==str1.intern());
+    str1 = new StringBuilder().append("java").toString();
+    System.out.println(str1==str1.intern());
+    
+    //jdk6 false false
+    //jdk7 true false
+    ```
+    原因是在JDK7中，运行时常量池会存储第一次出现的字符串的**引用**，而之前的版本会把第一次出现的字符串直接复制到运行时常量池中
+    - 方法区出现OOM时，一般是因为大量产生的动态类，或者大量的JSP文件（JSP文件第一次运行时，需要编译成JAVA类），因为类被回收的条件比较苛刻
+
+- 本机直接内存溢出
+
+
 ### Tips
 - 分配内存的过程需要保证安全性，一种操作是采用同步锁，另一种方式是使用TLAB(Thread Local Allocation Buffer)对每个线程中的对象单独分配
 - HotSpot使用的[垃圾收集器](http://1028826685.iteye.com/blog/2352507)
+
+### Java垃圾回收机制
+---
+### 引用计数
+### 可达性分析
