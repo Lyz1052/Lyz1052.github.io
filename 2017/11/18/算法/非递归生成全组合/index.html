@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Life and Code</title>
+  <title>非递归生成全组合 | Life and Code</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2017年11月18日22:07:36java 算法 递归 回溯 组合 排列组合  https://leetcode.com/problems/subsets/description/ （还是以Leetcode上的题目为例，不过这次的代码比非递归生成全排列要快速和清晰很多）  思路是通过对全组合的观察，得出一组操作顺序，使得每一步操作都能在只对一个位置上的状态进行开关的同时，生成一种全新的组合 首">
+  <meta name="description" content="https://leetcode.com/problems/subsets/description/ （还是以Leetcode上的题目为例，不过这次的代码比非递归生成全排列要快速和清晰很多）  思路是通过对全组合的观察，得出一组操作顺序，使得每一步操作都能在只对一个位置上的状态进行开关的同时，生成一种全新的组合 首先有一个状态数组，记录所有元素的使用状态，因为状态只有两种可能，使用或是未使用，我">
+<meta name="keywords" content="java,回溯,算法,递归,组合,排列组合">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Life and Code">
+<meta property="og:title" content="非递归生成全组合">
 <meta property="og:url" content="http://yoursite.com/2017/11/18/算法/非递归生成全组合/index.html">
 <meta property="og:site_name" content="Life and Code">
-<meta property="og:description" content="2017年11月18日22:07:36java 算法 递归 回溯 组合 排列组合  https://leetcode.com/problems/subsets/description/ （还是以Leetcode上的题目为例，不过这次的代码比非递归生成全排列要快速和清晰很多）  思路是通过对全组合的观察，得出一组操作顺序，使得每一步操作都能在只对一个位置上的状态进行开关的同时，生成一种全新的组合 首">
-<meta property="og:updated_time" content="2017-11-18T15:46:08.975Z">
+<meta property="og:description" content="https://leetcode.com/problems/subsets/description/ （还是以Leetcode上的题目为例，不过这次的代码比非递归生成全排列要快速和清晰很多）  思路是通过对全组合的观察，得出一组操作顺序，使得每一步操作都能在只对一个位置上的状态进行开关的同时，生成一种全新的组合 首先有一个状态数组，记录所有元素的使用状态，因为状态只有两种可能，使用或是未使用，我">
+<meta property="og:updated_time" content="2017-11-18T15:57:00.913Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Life and Code">
-<meta name="twitter:description" content="2017年11月18日22:07:36java 算法 递归 回溯 组合 排列组合  https://leetcode.com/problems/subsets/description/ （还是以Leetcode上的题目为例，不过这次的代码比非递归生成全排列要快速和清晰很多）  思路是通过对全组合的观察，得出一组操作顺序，使得每一步操作都能在只对一个位置上的状态进行开关的同时，生成一种全新的组合 首">
+<meta name="twitter:title" content="非递归生成全组合">
+<meta name="twitter:description" content="https://leetcode.com/problems/subsets/description/ （还是以Leetcode上的题目为例，不过这次的代码比非递归生成全排列要快速和清晰很多）  思路是通过对全组合的观察，得出一组操作顺序，使得每一步操作都能在只对一个位置上的状态进行开关的同时，生成一种全新的组合 首先有一个状态数组，记录所有元素的使用状态，因为状态只有两种可能，使用或是未使用，我">
   
     <link rel="alternate" href="/atom.xml" title="Life and Code" type="application/atom+xml">
   
@@ -53,8 +54,48 @@
 		
 
 
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
+
+	
+		
+	
 
 
+<a class='main-nav-link' target='_self' href='/categories/dota2/' >dota2</a><a class='main-nav-link' target='_self' href='/categories/git/' >git</a><a class='main-nav-link' target='_self' href='/categories/english/' >english</a><a class='main-nav-link' target='_self' href='/categories/hexo/' >hexo</a><a class='main-nav-link' target='_self' href='/categories/java/' >java</a><a class='main-nav-link' target='_self' href='/categories/js/' >js</a><a class='main-nav-link' target='_self' href='/categories/playground/' >playground</a><a class='main-nav-link' target='_self' href='/categories/shell/' >shell</a><a class='main-nav-link' target='_self' href='/categories/web/' >web</a><a class='main-nav-link' target='_self' href='/categories/算法/' >算法</a>
 	  
     
   </nav>
@@ -70,10 +111,20 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      非递归生成全组合
+    </h1>
+  
+
+
+      </header>
+    
     <div class="article-entry typo" itemprop="articleBody">
       
-        <p>2017年11月18日22:07:36<br>java 算法 递归 回溯 组合 排列组合</p>
-<hr>
+        <hr>
 <p><a href="https://leetcode.com/problems/subsets/description/" target="_blank" rel="external">https://leetcode.com/problems/subsets/description/</a></p>
 <p>（还是以Leetcode上的题目为例，不过这次的代码比非递归生成全排列要快速和清晰很多）</p>
 <ul>
@@ -102,11 +153,29 @@
         <li>
           <span class="label">发布日期:</span>
           <a href="/2017/11/18/算法/非递归生成全组合/" class="article-date">
-  <time datetime="2017-11-18T15:46:56.292Z" itemprop="datePublished">2017-11-18</time>
+  <time datetime="2017-11-17T16:00:00.000Z" itemprop="datePublished">2017-11-18</time>
 </a>
 
         </li>
         
+          <li>
+            <span class="label">分类:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/算法/">算法</a>
+  </div>
+
+
+          </li>
+        
+        
+          <li>
+            <span class="label">标签:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/回溯/">回溯</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/排列组合/">排列组合</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/组合/">组合</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/递归/">递归</a></li></ul>
+
+
+          </li>
         
         <hr/>
       </ul>
@@ -119,9 +188,9 @@
     <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
   
   
-    <a href="/2017/11/18/算法/非递归生成全排列/" id="article-nav-older" class="article-nav-link-wrap older">
+    <a href="/2017/11/18/java/Spring MVC/" id="article-nav-older" class="article-nav-link-wrap older">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">Spring MVC</div>
     </a>
   
 </nav>

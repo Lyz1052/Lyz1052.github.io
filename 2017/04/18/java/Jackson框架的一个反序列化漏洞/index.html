@@ -6,13 +6,13 @@
   <title>Jackson框架的一个反序列化漏洞 | Life and Code</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Jackson的反序列化漏洞  尝试了一下，确实可以获取操作系统权限，但条件比较苛刻  需要后台开启Jacakson的enableDefaultTyping 开放的接口中包括了在未经检查的情况下，将外来JSON字符串直接转实体的操作 实体中包括类型为Object的对象  具体代码就卜上了，Jackson2.8已有补丁，不过只是字符串过滤。漏洞的核心原理是利用了xalan的解析方法中存在将字节流转">
-<meta name="keywords" content="java,jackson,漏洞">
+<meta name="keywords" content="java,jackson,安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jackson框架的一个反序列化漏洞">
 <meta property="og:url" content="http://yoursite.com/2017/04/18/java/Jackson框架的一个反序列化漏洞/index.html">
 <meta property="og:site_name" content="Life and Code">
 <meta property="og:description" content="Jackson的反序列化漏洞  尝试了一下，确实可以获取操作系统权限，但条件比较苛刻  需要后台开启Jacakson的enableDefaultTyping 开放的接口中包括了在未经检查的情况下，将外来JSON字符串直接转实体的操作 实体中包括类型为Object的对象  具体代码就卜上了，Jackson2.8已有补丁，不过只是字符串过滤。漏洞的核心原理是利用了xalan的解析方法中存在将字节流转">
-<meta property="og:updated_time" content="2017-05-11T15:13:28.138Z">
+<meta property="og:updated_time" content="2017-11-18T15:57:00.910Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jackson框架的一个反序列化漏洞">
 <meta name="twitter:description" content="Jackson的反序列化漏洞  尝试了一下，确实可以获取操作系统权限，但条件比较苛刻  需要后台开启Jacakson的enableDefaultTyping 开放的接口中包括了在未经检查的情况下，将外来JSON字符串直接转实体的操作 实体中包括类型为Object的对象  具体代码就卜上了，Jackson2.8已有补丁，不过只是字符串过滤。漏洞的核心原理是利用了xalan的解析方法中存在将字节流转">
@@ -29,9 +29,10 @@
         
           
         
+
         
         
-      <body class="dark ">
+      <body class="three">
 
       
       <div id="container" class="container">
@@ -81,8 +82,20 @@
 		
 	
 
+	
+		
+	
 
-<a class='main-nav-link' target='_self' href='/categories/dota2/' >dota2</a><a class='main-nav-link' target='_self' href='/categories/hexo/' >hexo</a><a class='main-nav-link' target='_self' href='/categories/Java/' >Java</a><a class='main-nav-link' target='_self' href='/categories/java/' >java</a><a class='main-nav-link' target='_self' href='/categories/js/' >js</a><a class='main-nav-link' target='_self' href='/categories/shell/' >shell</a><a class='main-nav-link' target='_self' href='/categories/算法/' >算法</a>
+	
+		
+	
+
+	
+		
+	
+
+
+<a class='main-nav-link' target='_self' href='/categories/dota2/' >dota2</a><a class='main-nav-link' target='_self' href='/categories/git/' >git</a><a class='main-nav-link' target='_self' href='/categories/english/' >english</a><a class='main-nav-link' target='_self' href='/categories/hexo/' >hexo</a><a class='main-nav-link' target='_self' href='/categories/java/' >java</a><a class='main-nav-link' target='_self' href='/categories/js/' >js</a><a class='main-nav-link' target='_self' href='/categories/playground/' >playground</a><a class='main-nav-link' target='_self' href='/categories/shell/' >shell</a><a class='main-nav-link' target='_self' href='/categories/web/' >web</a><a class='main-nav-link' target='_self' href='/categories/算法/' >算法</a>
 	  
     
   </nav>
@@ -148,7 +161,7 @@
           <li>
             <span class="label">标签:</span>
             
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jackson/">jackson</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞/">漏洞</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jackson/">jackson</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安全/">安全</a></li></ul>
 
 
           </li>
@@ -161,19 +174,19 @@
     
 <nav id="article-nav" class="article-nav">
   
-    <a href="/2017/04/18/java/Jackson框架enableDefaultTyping方法反序列化漏洞/" id="article-nav-newer" class="article-nav-link-wrap newer">
+    <a href="/2017/04/20/dota2/徐9C的故事/" id="article-nav-newer" class="article-nav-link-wrap newer">
       <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
-          Jackson框架enableDefaultTyping方法反序列化漏洞
+          徐9C的故事
         
       </div>
     </a>
   
   
-    <a href="/2017/04/17/java/深入理解Java虚拟机阅读笔记/" id="article-nav-older" class="article-nav-link-wrap older">
+    <a href="/2017/04/17/java/深入理解Java虚拟机阅读笔记 II/" id="article-nav-older" class="article-nav-link-wrap older">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">深入理解Java虚拟机阅读笔记</div>
+      <div class="article-nav-title">深入理解Java虚拟机阅读笔记 II</div>
     </a>
   
 </nav>
