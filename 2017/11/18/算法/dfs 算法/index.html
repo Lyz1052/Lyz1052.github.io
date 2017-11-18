@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Life and Code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2017年11月17日20:08:33dfs 算法  DFS深度优先搜索算法，包括了回溯算法，一般以递归的方式去实现  枚举出所有状态位，一般用数组进行存储 合理的时候进行剪枝 dfs过程中，状态位的重置（多用于回溯过程）最好不要用 memcpy 的方式去实现（浪费空间）  Leetcode Subset ProblemA general approach to backtracking ques">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Life and Code">
+<meta property="og:url" content="http://yoursite.com/2017/11/18/算法/dfs 算法/index.html">
+<meta property="og:site_name" content="Life and Code">
+<meta property="og:description" content="2017年11月17日20:08:33dfs 算法  DFS深度优先搜索算法，包括了回溯算法，一般以递归的方式去实现  枚举出所有状态位，一般用数组进行存储 合理的时候进行剪枝 dfs过程中，状态位的重置（多用于回溯过程）最好不要用 memcpy 的方式去实现（浪费空间）  Leetcode Subset ProblemA general approach to backtracking ques">
+<meta property="og:updated_time" content="2017-11-18T15:46:08.310Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Life and Code">
+<meta name="twitter:description" content="2017年11月17日20:08:33dfs 算法  DFS深度优先搜索算法，包括了回溯算法，一般以递归的方式去实现  枚举出所有状态位，一般用数组进行存储 合理的时候进行剪枝 dfs过程中，状态位的重置（多用于回溯过程）最好不要用 memcpy 的方式去实现（浪费空间）  Leetcode Subset ProblemA general approach to backtracking ques">
+  
+    <link rel="alternate" href="/atom.xml" title="Life and Code" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+</head>
+
+      
+        
+          
+        
+
+        
+        
+      <body class="three">
+
+      
+      <div id="container" class="container">
+      
+
+        <article id="post-算法/dfs 算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+	  
+		<a class="main-nav-link" href="/">首页</a>
+	  
+    
+	  
+		<a class="main-nav-link" href="/archives">归档</a>
+	  
+    
+	  
+		
+
+
+
+
+	  
+    
+  </nav>
+  
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 源"></a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <p>2017年11月17日20:08:33<br>dfs 算法</p>
+<hr>
+<h1 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h1><p>深度优先搜索算法，包括了回溯算法，一般以递归的方式去实现</p>
+<ul>
+<li>枚举出所有状态位，一般用数组进行存储</li>
+<li>合理的时候进行剪枝</li>
+<li>dfs过程中，状态位的重置（多用于回溯过程）最好不要用 memcpy 的方式去实现（浪费空间）</li>
+</ul>
+<h3 id="Leetcode-Subset-Problem"><a href="#Leetcode-Subset-Problem" class="headerlink" title="Leetcode Subset Problem"></a>Leetcode Subset Problem</h3><p><a href="https://discuss.leetcode.com/topic/46159/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning" target="_blank" rel="external">A general approach to backtracking questions in Java (Subsets, Permutations, Combination Sum, Palindrome Partitioning)</a></p>
+<p> <a href="https://leetcode.com/problems/subsets/" target="_blank" rel="external">https://leetcode.com/problems/subsets/</a></p>
+<h3 id="POJ-1753"><a href="#POJ-1753" class="headerlink" title="POJ 1753"></a>POJ 1753</h3><p><a href="http://poj.org/problem?id=1753" target="_blank" rel="external">http://poj.org/problem?id=1753</a></p>
+<p>dfs（回溯）的思路</p>
+<ul>
+<li>暴力枚举状态位，共65535个</li>
+<li>剪枝，当开始枚举第三行时，实际上第一行的棋子已经不能翻转，因此遍历第一行，如果不符合条件直接结束</li>
+<li>因为总共只有16个状态位，而且状态位的取值只可能是 0，1，所以可以用一个整型数字来存储当前状态，并通过16个不同的抑或数来简化“翻转”过程，例如对 i=1 j=1 状态时的翻转，实际上是当前状态所对应的数字与 0100 1110 0100 0000，即 20032 的抑或</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">发布日期:</span>
+          <a href="/2017/11/18/算法/dfs 算法/" class="article-date">
+  <time datetime="2017-11-18T15:46:56.287Z" itemprop="datePublished">2017-11-18</time>
+</a>
+
+        </li>
+        
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2017/11/18/算法/Leetcode 中的dp问题笔记（Java）/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/18/web/XSS/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+          
+        
+
+
+
+
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>有时候输了比赛，总感觉队友不给力. <em>—— 徐志雷</em></p>
+
+
+  </div>
+</footer>
+
+        
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+
+
+
+
+
+
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </body>
+</html>

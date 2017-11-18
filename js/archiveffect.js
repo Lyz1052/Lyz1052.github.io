@@ -141,7 +141,7 @@ function init() {
     // controls.maxDistance = 6000;
     // controls.addEventListener('change', render);
 
-    transform(targets[archive.default], 2000);
+    transform(targets[archive.default], 1000);
 
     if (archive.tweenable)
         $('body').on('keypress', function (e) {
@@ -157,14 +157,14 @@ function init() {
             switch (e.keyCode) {
                 case 52:
                     moveIfNotList(-1);
-                    transform(targets.index, 2000);
+                    transform(targets.index, 1000);
                     break;
                 case 53:
                     cameraResetter.reset();
                     break;
                 case 54:
                     moveIfNotList(1);
-                    transform(targets.index, 2000);
+                    transform(targets.index, 1000);
                     break;
             }
         })
