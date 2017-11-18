@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  
+  <title>如何创建自己的Hexo博客 | Life and Code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hexo是一个开源的博客工具，我们可以通过他简单地创建属于我们的个人博客站点   安装 nodejs  通过npm安装hexo客户端   1npm install hexo-cli -g  创建本地服务器（默认端口4000）   1234hexo init blogcd blognpm installhexo server  更换模板  下载模板 12   cd themesgit clone">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何创建自己的Hexo博客">
+<meta property="og:url" content="http://yoursite.com/2016/06/07/1/index.html">
+<meta property="og:site_name" content="Life and Code">
+<meta property="og:description" content="Hexo是一个开源的博客工具，我们可以通过他简单地创建属于我们的个人博客站点   安装 nodejs  通过npm安装hexo客户端   1npm install hexo-cli -g  创建本地服务器（默认端口4000）   1234hexo init blogcd blognpm installhexo server  更换模板  下载模板 12   cd themesgit clone">
+<meta property="og:updated_time" content="2017-04-12T13:22:55.447Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何创建自己的Hexo博客">
+<meta name="twitter:description" content="Hexo是一个开源的博客工具，我们可以通过他简单地创建属于我们的个人博客站点   安装 nodejs  通过npm安装hexo客户端   1npm install hexo-cli -g  创建本地服务器（默认端口4000）   1234hexo init blogcd blognpm installhexo server  更换模板  下载模板 12   cd themesgit clone">
+  
+    <link rel="alternate" href="/atom.xml" title="Life and Code" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何创建自己的Hexo博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <blockquote>
+<p>Hexo是一个开源的博客工具，我们可以通过他简单地创建属于我们的个人博客站点</p>
+</blockquote>
+<ul>
+<li><p>安装 <a href="https://nodejs.org" target="_blank" rel="external">nodejs</a></p>
+</li>
+<li><p>通过npm安装hexo客户端</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建本地服务器（默认端口4000）</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo init blog</div><div class="line">cd blog</div><div class="line">npm install</div><div class="line">hexo server</div></pre></td></tr></table></figure>
+</li>
+<li><p>更换<a href="http://www.zhihu.com/question/24422335" target="_blank" rel="external">模板</a></p>
+<ul>
+<li><p>下载模板</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">   cd themes</div><div class="line">git clone &lt;模板项目的地址&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>指定模板 config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: 模板名（themes目录下的模板文件夹名，注意冒号后面有个空格）</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>创建一篇新文章</p>
+<ul>
+<li><p>scaffolds目录下保存文章模板</p>
+</li>
+<li><p>source目录下保存文章</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new post helloworld # 模板为post，文件名为helloworld的文章</div></pre></td></tr></table></figure>
+</li>
+<li><p>或者直接在 source 的_post目录下添加修改，本地服务器上可以看到即时改动</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>发布到github</p>
+<ul>
+<li><p>在github上创建项目：项目名为 用户名.github.io</p>
+</li>
+<li><p>hexo的发布模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+</li>
+<li><p>hexo的发布配置 _config.yml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">repo: git@github.com:用户名/用户名.github.io.git</div><div class="line">branch: master</div></pre></td></tr></table></figure>
+</li>
+<li><p>生成静态代码，发布</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ul>
+<li><p>写完博客后，用简化的命令<code>hexo s</code> <code>hexo g</code> <code>hexo d</code>完成发布</p>
+</li>
+<li><p>不光是yml文件，包括markdown文档，字段名的冒号后一定要跟上一个半角空格，不然会报错</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2016/06/07/1/" class="article-date">
+  <time datetime="2016-06-07T06:37:03.000Z" itemprop="datePublished">2016-06-07</time>
+</a>
+
+        </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  
+  
+    <a href="/2017/03/27/try/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">尝试一下Hexo的功能特性</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>Post</p>
+
+
+      </div>
+    </footer>
+
+      
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>
